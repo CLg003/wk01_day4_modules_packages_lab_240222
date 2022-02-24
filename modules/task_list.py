@@ -1,29 +1,25 @@
-tasks = [
-    { "description": "Wash Dishes", "completed": False, "time_taken": 10 },
-    { "description": "Clean Windows", "completed": False, "time_taken": 15 },
-    { "description": "Make Dinner", "completed": True, "time_taken": 30 },
-    { "description": "Feed Cat", "completed": False, "time_taken": 5 },
-    { "description": "Walk Dog", "completed": True, "time_taken": 60 },
-]
+
 
 # Functions to complete:
 
 
 ## Get a list of uncompleted tasks
 def get_uncompleted_tasks(list):
-    uncompleted_tasks = []
-    for task in list:
-        if task["completed"] == False:
-            uncompleted_tasks.append(task)
-    return uncompleted_tasks
+    return get_tasks_by_status(list, False)
+    # uncompleted_tasks = []
+    # for task in list:
+    #     if task["completed"] == False:
+    #         uncompleted_tasks.append(task)
+    # return uncompleted_tasks
 
 ## Get a list of completed tasks
 def get_completed_tasks(list):
-    completed_tasks = []
-    for task in list:
-        if task["completed"] == True:
-            completed_tasks.append(task)
-    return completed_tasks
+    return get_tasks_by_status(list, True)
+    # completed_tasks = []
+    # for task in list:
+    #     if task["completed"] == True:
+    #         completed_tasks.append(task)
+    # return completed_tasks
 
 ## Get tasks where time_taken is at least a given time
 def get_tasks_taking_at_least(list, time):
