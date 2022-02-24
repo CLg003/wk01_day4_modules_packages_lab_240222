@@ -1,7 +1,13 @@
 from modules.task_list import *
 from modules.output import *
-from data.task_list import *
+# from data.task_list import *
 from modules.input import *
+
+tasks = []
+
+answer = input("Would you like to import a task list? Y/N: ")
+if answer.lower() == "y":
+    from data.task_list import *
 
 while (True):
     print_menu()
