@@ -8,6 +8,7 @@ tasks = [
 
 # Functions to complete:
 
+
 ## Get a list of uncompleted tasks
 def get_uncompleted_tasks(list):
     uncompleted_tasks = []
@@ -42,7 +43,11 @@ def get_task_with_description(list, description):
 
 ## Get a list of tasks by status
 def get_tasks_by_status(list, status):
-    pass
+    task_status_list = []
+    for task in list:
+        if task["completed"] == status:
+            task_status_list.append(task)
+    return task_status_list
 
 def mark_task_complete(task):
     task["completed"] = True
